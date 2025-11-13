@@ -8,7 +8,7 @@ const { title, background = false } = Astro.props;
 ---
 
 <section class:list={[
-    { "bg-[url(background.svg)] bg-no-repeat bg-cover py-10": background }
+    { "bg-[url(/background.svg)] bg-no-repeat bg-cover py-10": background }
 ]}>
         <slot name="after-title"/>
 
