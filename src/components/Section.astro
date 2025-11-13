@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string;
+    background?: boolean;
+}
+
+const { title, background = false } = Astro.props;
+---
+
+<section class:list={[
+    { "bg-[url(background.svg)] bg-no-repeat bg-cover py-10": background }
+]}>
+        <slot name="after-title"/>
+
+        <h2 class="pb-10 font-[Barlow] text-3xl text-center">{ title }</h2>
+
+        <slot/>
+</section>

@@ -1,0 +1,35 @@
+---
+import { Picture } from 'astro:assets';
+
+import HeaderPicture from '@assets/header-picture.png';
+import Down from '@assets/down.svg';
+
+const sections = [
+    { href: '#', label: "Productos" },
+    { href: '#', label: "Proceso de Entrega" },
+    { href: '#', label: "Contactos" }
+];
+---
+
+<header class="min-h-screen flex flex-col justify-center items-center gap-10 relative">
+    <div class="relative size-80 flex items-center justify-center bg-radial to-black to-90% from-red-900">
+        <Picture src={ HeaderPicture } formats={[ "avif", "webp" ]} alt="Logotipo del sitio."  class="absolute w-80 z-10 top-7 left-1/2 -translate-x-1/2"/>
+
+        <h1 class="font-[Barlow] text-6xl z-20">
+            <span class="block text-center">COMBOS</span>
+            <span class="block text-center text-black/50 text-stroke">SANTIAGO</span>
+        </h1>
+    </div>
+
+    <nav>
+        <ul class="flex flex-col items-center gap-5 text-xl font-bold">
+            {
+                sections.map(({ href, label })=> (
+                    <li>{ label }</li>
+                ))
+            }
+        </ul>
+    </nav>
+
+    <Down class="absolute bottom-5 animate-bounce text-white/30"/>
+</header>

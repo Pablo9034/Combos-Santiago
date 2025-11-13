@@ -1,0 +1,24 @@
+---
+import Certificate from '@assets/certificate.svg';
+import Meat from '@assets/meat.svg';
+import Package from '@assets/package.svg';
+import Delivery from '@assets/delivery.svg';
+
+const services = [
+    { icon: Certificate, label: 'Calidad Certificada' },
+    { icon: Meat, label: 'Corte Profecional' },
+    { icon: Package, label: 'Empaquetado' },
+    { icon: Delivery, label: 'Servicio de Entrega' },
+];
+---
+
+<ul class="mb-10 py-5 flex flex-wrap justify-center gap-5">
+    {
+        services.map(({ icon: Icon, label })=> (
+            <li class="w-44">
+                <Icon stroke-width={ 1 } class="size-16 mx-auto"/>
+                <span class="block text-center">{ label }</span>
+            </li>
+        ))
+    }
+</ul>
