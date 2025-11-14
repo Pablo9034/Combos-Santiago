@@ -5,6 +5,8 @@ import Layout from '../layouts/Layout.astro';
 import Section from '@components/Section.astro';
 import Services from '@components/Services.astro';
 import ProductLoading from '@components/ProductLoading.astro';
+import NavigationBTNsLoading from '@components/NavigationBTNsLoading.astro';
+
 import Product from '@components/Product.astro';
 import NavigationBTNs from '@components/NavigationBTNs.astro';
 
@@ -12,17 +14,17 @@ import DNI from '@assets/DNI.jpg';
 ---
 
 <Layout title="Combos Santiago">
-    <Section title="Productos" background>
+    <Section title="Productos" id="products" background>
         <Services slot="after-title"/>
 
         <div class="flex justify-center">
             <ProductLoading/>
         </div>
 
-        <NavigationBTNs/>
+        <NavigationBTNsLoading/>
     </Section>
     
-    <Section title="Proceso de Entrega">
+    <Section title="Proceso de Entrega" id="process_delivery">
         <div class="mb-10">
             <Picture src={ DNI } alt="Imagen de un Carnet de Identidad Cubano" class="w-80 mx-auto rounded-2xl border-4 rotate-6 shadow shadow-gray-500"/>
         </div>

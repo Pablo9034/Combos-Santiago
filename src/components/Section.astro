@@ -1,10 +1,11 @@
 ---
 interface Props {
     title: string;
+    id?: string;
     background?: boolean;
 }
 
-const { title, background = false } = Astro.props;
+const { title, id, background = false } = Astro.props;
 ---
 
 <section class:list={[
@@ -12,7 +13,7 @@ const { title, background = false } = Astro.props;
 ]}>
         <slot name="after-title"/>
 
-        <h2 class="pb-5 font-[Barlow] text-3xl text-center">{ title }</h2>
+        <h2 id={ id ?? '' } class="pb-5 font-[Barlow] text-3xl text-center">{ title }</h2>
 
         <slot/>
 </section>
