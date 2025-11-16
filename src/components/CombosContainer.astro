@@ -1,0 +1,21 @@
+---
+import { db, Combos } from "astro:db";
+
+import Combo from "./Combo.astro";
+
+interface Combo {
+    title: string;
+    price: { US: number, BR: number };
+    content: [{ item: string, weight: string }];
+}
+
+const combos = await db.select().from(Combos) as Array<Combo>;
+---
+
+<div class="py-5 flex justify-center flex-wrap gap-y-10">
+    {
+        combos.map(({ title, price, content }, index)=> (
+            <Combo id={ index } title={ title } price={ price } content={ content } client:load/>
+        ))
+    }
+</div>

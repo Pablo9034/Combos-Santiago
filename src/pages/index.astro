@@ -4,11 +4,7 @@ import { Picture } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Section from '@components/Section.astro';
 import Services from '@components/Services.astro';
-import ProductLoading from '@components/ProductLoading.astro';
-import NavigationBTNsLoading from '@components/NavigationBTNsLoading.astro';
-
-import Product from '@components/Product.astro';
-import NavigationBTNs from '@components/NavigationBTNs.astro';
+import CombosContainer from '@components/CombosContainer.astro';
 
 import DNI from '@assets/DNI.jpg';
 ---
@@ -17,11 +13,7 @@ import DNI from '@assets/DNI.jpg';
     <Section title="Productos" id="products" background>
         <Services slot="after-title"/>
 
-        <div class="flex justify-center">
-            <ProductLoading/>
-        </div>
-
-        <NavigationBTNsLoading/>
+        <CombosContainer/>
     </Section>
     
     <Section title="Proceso de Entrega" id="process_delivery">

@@ -8,6 +8,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@components/*": ["src/components/*"],
       "@styles": ["src/styles/global.css"],
+      "@scripts": ["src/scripts/index.ts"],
       "@assets/*": ["src/assets/*"]
     }
   }
