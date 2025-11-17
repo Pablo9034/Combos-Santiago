@@ -4,17 +4,16 @@ import ComboPrice from './ComboPrice.astro';
 import Pay from '@assets/pay.svg';
 
 interface Props {
-    id: number;
     title: string;
     price: { US: number, BR: number };
     content: [{ item: string, weight: string }];
 }
 
-const { id, title, price, content } = Astro.props;
+const { title, price, content } = Astro.props;
 ---
 
-<div class="w-80 pt-5 rounded-3xl shadow-md shadow-black/80 bg-black/50 p-2">
-    <ComboPrice client:load/>
+<div class="relative w-80 pt-5 rounded-3xl shadow-md shadow-black/80 bg-black/50 p-2">
+    <ComboPrice price={ price } server:defer/>
 
     <h3 class="mb-5 font-[Barlow] text-2xl text-center">{ title }</h3>
 

@@ -1,7 +1,18 @@
 ---
+import Tag from '@assets/tag.svg';
 
+const country = (Astro.request.headers.get('X-Vercel-IP-Coutry') === 'BR') ? 'BR' : 'US';
 
-const country = Astro.request.headers.get('X-Vercel-IP-Coutry') ?? 'US';
+interface Props {
+    price: { US: number, BR: number };
+}
+
+const { price } = Astro.props;
+const priceText = ()=> {
+    let text = (country === 'BR') ? 'R$' : '$';
+    text += ` ${ price[country] }`;
+    return text;
+}
 ---
 
-<span>{ country }</span>
+<span class="absolute right-0 top-0 rotate-12 text-3xl text-yellow-300">{ priceText() } <Tag class="absolute -right-8"/></span>

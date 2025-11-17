@@ -7,7 +7,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [db()],
-  adapter: vercel()
+  adapter: vercel(),
+  output: 'server'
 });

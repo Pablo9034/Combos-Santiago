@@ -1,4 +1,6 @@
 ---
+export const prerender = true;
+
 import { Picture } from 'astro:assets';
 
 import Layout from '../layouts/Layout.astro';
@@ -18,7 +20,7 @@ import DNI from '@assets/DNI.jpg';
     
     <Section title="Proceso de Entrega" id="process_delivery">
         <div class="mb-10">
-            <Picture src={ DNI } alt="Imagen de un Carnet de Identidad Cubano" class="w-80 mx-auto rounded-2xl border-4 rotate-6 shadow shadow-gray-500"/>
+            <Picture src={ DNI } alt="Imagen de un Carnet de Identidad Cubano" class="w-80 mx-auto rounded-2xl border-4 -rotate-6 shadow shadow-gray-500"/>
         </div>
 
         <div class="px-3">

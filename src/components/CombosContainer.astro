@@ -14,8 +14,8 @@ const combos = await db.select().from(Combos) as Array<Combo>;
 
 <div class="py-5 flex justify-center flex-wrap gap-y-10">
     {
-        combos.map(({ title, price, content }, index)=> (
-            <Combo id={ index } title={ title } price={ price } content={ content } client:load/>
+        combos.map(({ title, price, content })=> (
+            <Combo title={ title } price={ price } content={ content } client:load/>
         ))
     }
 </div>
