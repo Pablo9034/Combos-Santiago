@@ -1,4 +1,6 @@
 ---
+import ComboPrice from './ComboPrice.astro';
+
 import Pay from '@assets/pay.svg';
 
 interface Props {
@@ -12,6 +14,8 @@ const { id, title, price, content } = Astro.props;
 ---
 
 <div class="w-80 pt-5 rounded-3xl shadow-md shadow-black/80 bg-black/50 p-2">
+    <ComboPrice/>
+
     <h3 class="mb-5 font-[Barlow] text-2xl text-center">{ title }</h3>
 
     <ul class="px-3">
