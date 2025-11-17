@@ -1,5 +1,7 @@
 ---
-const country = await Astro.request.headers.get('x-vercel-ip-country') ?? 'US';
+
+
+const country = Astro.request.headers.get('X-Vercel-IP-Coutry') ?? 'US';
 ---
 
 <span>{ country }</span>
