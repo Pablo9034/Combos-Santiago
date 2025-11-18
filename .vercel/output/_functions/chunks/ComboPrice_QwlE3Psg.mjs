@@ -29,15 +29,11 @@ const $$Astro = createAstro();
 const $$ComboPrice = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$ComboPrice;
-  const { id } = Astro2.props;
-  const country = Astro2.request.headers.get("X-Vercel-IP-Coutry") === "BR" ? "BR" : "US";
-  const prices = [
-    { US: 120, BR: 800 },
-    { US: 120, BR: 800 }
-  ];
+  const { price } = Astro2.props;
+  const country = Astro2.request.headers.get("x-vercel-ip-country") === "BR" ? "BR" : "US";
   const priceText = () => {
     let text = country === "BR" ? "R$" : "$";
-    text += ` ${prices[id][country]}`;
+    text += ` ${price[country]}`;
     return text;
   };
   return renderTemplate`${maybeRenderHead()}<span class="absolute right-0 top-0 rotate-12 text-3xl text-yellow-300">${priceText()} ${renderComponent($$result, "Tag", Tag, { "class": "absolute -right-8" })}</span>`;
