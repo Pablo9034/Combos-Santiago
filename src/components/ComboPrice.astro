@@ -1,16 +1,20 @@
 ---
 import Tag from '@assets/tag.svg';
 
-const country = (Astro.request.headers.get('X-Vercel-IP-Coutry') === 'BR') ? 'BR' : 'US';
-
 interface Props {
-    price: { US: number, BR: number };
+    id: number;
 }
 
-const { price } = Astro.props;
+const { id } = Astro.props;
+const country = (Astro.request.headers.get('X-Vercel-IP-Coutry') === 'BR') ? 'BR' : 'US';
+const prices = [
+    { US: 120, BR: 800 },
+    { US: 120, BR: 800 }
+];
+
 const priceText = ()=> {
     let text = (country === 'BR') ? 'R$' : '$';
-    text += ` ${ price[country] }`;
+    text += ` ${ prices[id][country] }`;
     return text;
 }
 ---

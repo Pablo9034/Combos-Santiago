@@ -3,10 +3,12 @@ export const prerender = true;
 
 import { Picture } from 'astro:assets';
 
+import { getDB } from '@scripts';
+
 import Layout from '../layouts/Layout.astro';
 import Section from '@components/Section.astro';
 import Services from '@components/Services.astro';
-import CombosContainer from '@components/CombosContainer.astro';
+import Combo from '@components/Combo.astro';
 
 import DNI from '@assets/DNI.jpg';
 ---
@@ -15,7 +17,11 @@ import DNI from '@assets/DNI.jpg';
     <Section title="Productos" id="products" background>
         <Services slot="after-title"/>
 
-        <CombosContainer/>
+        <div class="py-5 flex justify-center flex-wrap gap-y-10">
+            {
+                getDB().map(({ title, content, price }, index)=> <Combo id={ index } title={ title } content={ content } price={ price } />)
+            }
+        </div>
     </Section>
     
     <Section title="Proceso de Entrega" id="process_delivery">

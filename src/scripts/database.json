@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Combo Estandar",
+		"content": [
+			{ "item": "Pierna de cerdo al corte", "weight": "10lb" },
+    		{ "item": "Lomo rebanado", "weight": "5lb" },
+    		{ "item": "Chuleta de pierna", "weight": "5lb" },
+    		{ "item": "Picadillo de cerdo", "weight": "3lb" },
+    		{ "item": "Manteca", "weight": "1/2lb" },
+    		{ "item": "Gordo de cerdo", "weight": "5lb" },
+    		{ "item": "Costilla de cerdo", "weight": "3lb" },
+    		{ "item": "Pescado de mar", "weight": "3lb" },
+    		{ "item": "Hígado de cerdo", "weight": "400gr" },
+    		{ "item": "Pata de cerdo", "weight": "1paq" },
+    		{ "item": "Lascón de cerdo", "weight": "1paq" },
+    		{ "item": "File de huevos", "weight": "30u" }
+		],
+        "price": { "US": 120, "BR": 800 }
+	},
+	{
+		"title": "Combo Estandar",
+		"content": [
+			{ "item": "Pierna de cerdo al corte", "weight": "10lb" },
+    		{ "item": "Lomo rebanado", "weight": "5lb" },
+    		{ "item": "Chuleta de pierna", "weight": "5lb" },
+    		{ "item": "Picadillo de cerdo", "weight": "3lb" },
+    		{ "item": "Manteca", "weight": "1/2lb" },
+    		{ "item": "Gordo de cerdo", "weight": "5lb" },
+    		{ "item": "Costilla de cerdo", "weight": "3lb" },
+    		{ "item": "Pescado de mar", "weight": "3lb" },
+    		{ "item": "Hígado de cerdo", "weight": "400gr" },
+    		{ "item": "Pata de cerdo", "weight": "1paq" },
+    		{ "item": "Lascón de cerdo", "weight": "1paq" },
+    		{ "item": "File de huevos", "weight": "30u" }
+		],
+        "price": { "US": 120, "BR": 800 }
+	}
+]
