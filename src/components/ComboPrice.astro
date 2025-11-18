@@ -6,11 +6,11 @@ interface Props {
 }
 
 const { price } = Astro.props;
-const country = (Astro.request.headers.get('x-vercel-ip-country') === 'BR') ? 'BR' : 'US';
+const country = await Astro.request.headers.get('x-vercel-ip-country');
 
 const priceText = ()=> {
     let text = (country === 'BR') ? 'R$' : '$';
-    text += ` ${ price[country] }`;
+    text += ` ${ price[country === 'BR' ? 'BR' : 'US'] }`;
     return text;
 }
 ---
