@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 import Tag from '@assets/tag.svg';
 
 interface Props {
@@ -6,7 +8,7 @@ interface Props {
 }
 
 const { price } = Astro.props;
-const country = await Astro.request.headers.get('x-vercel-ip-country');
+const country = await Astro.request.headers.get('x-vercel-ip-country') ?? 'US';
 
 const priceText = ()=> {
     let text = (country === 'BR') ? 'R$' : '$';

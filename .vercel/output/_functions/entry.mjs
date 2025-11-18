@@ -1,9 +1,9 @@
 import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_DkoJQvC_.mjs';
-import { manifest } from './manifest_BqCoAWkW.mjs';
+import { manifest } from './manifest_HvKvHrsu.mjs';
 
 const serverIslandMap = new Map([
-	['ComboPrice', () => import('./chunks/ComboPrice_CjVrdv4_.mjs')],
+	['ComboPrice', () => import('./chunks/ComboPrice_8xkbeYjo.mjs')],
 ]);;
 
 const _page0 = () => import('./pages/_image.astro.mjs');
@@ -21,7 +21,7 @@ const _manifest = Object.assign(manifest, {
     middleware: () => import('./_noop-middleware.mjs')
 });
 const _args = {
-    "middlewareSecret": "62ca6f2e-4777-43c2-891a-f48e09eb3af0",
+    "middlewareSecret": "f7bd1481-b964-4438-9d38-76fccc9141d6",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);
