@@ -15,7 +15,7 @@
     		{ "item": "Lascón de cerdo", "weight": "1paq" },
     		{ "item": "File de huevos", "weight": "30u" }
 		],
-        "price": { "US": 120, "BR": 800 }
+        "price": { "US": 120, "BR": 750 }
 	},
 	{
 		"title": "Combo Estandar",
@@ -33,6 +33,6 @@
     		{ "item": "Lascón de cerdo", "weight": "1paq" },
     		{ "item": "File de huevos", "weight": "30u" }
 		],
-        "price": { "US": 120, "BR": 800 }
+        "price": { "US": 333, "BR": 666 }
 	}
 ]

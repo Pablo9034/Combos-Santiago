@@ -19,7 +19,9 @@ import DNI from '@assets/DNI.jpg';
 
         <div class="py-5 flex justify-center flex-wrap gap-y-10">
             {
-                getDB().map(({ title, content, price }, index)=> <Combo id={ index } title={ title } content={ content } price={ price } />)
+                getDB().map(({ title, content, price }, index)=> (
+                    <Combo id={ index } title={ title } content={ content } price={ price } />
+                ))
             }
         </div>
     </Section>
