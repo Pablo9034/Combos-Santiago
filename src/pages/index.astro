@@ -17,7 +17,7 @@ import DNI from '@assets/DNI.jpg';
     <Section title="Productos" id="products" background>
         <Services slot="after-title"/>
 
-        <div class="py-5 flex justify-center flex-wrap gap-y-10">
+        <div class="py-5 flex justify-center flex-wrap gap-y-10 max-w-4xl mx-auto lg:gap-10">
             {
                 getDB().map(({ title, content, price }, index)=> (
                     <Combo id={ index } title={ title } content={ content } price={ price } />
@@ -27,17 +27,19 @@ import DNI from '@assets/DNI.jpg';
     </Section>
     
     <Section title="Proceso de Entrega" id="process_delivery">
-        <div class="mb-10">
-            <Picture src={ DNI } alt="Imagen de un Carnet de Identidad Cubano" class="w-80 mx-auto rounded-2xl border-4 -rotate-6 shadow shadow-gray-500"/>
-        </div>
-
-        <div class="px-3">
-            <p class="first-letter:pl-3 pb-5">Una vez realizado el pago, el cliente deberá enviar los siguientes datos para proceder con el despacho del paquete:</p>
-            <ul class="mb-5 pl-5 list-disc">
-                <li>Dirección completa de entrega.</li>
-                <li>Fotografía de la identificación oficial de la persona que recibirá el paquete.</li>
-            </ul>
-            <p class="first-letter:pl-3 pb-5">Con esta información, el paquete podrá ser entregado el mismo día, siempre que las condiciones logísticas lo permitan. En cualquier caso, el plazo máximo de entrega es de 72 horas a partir de la confirmación de los datos mencionados. Como comprobante de entrega, se tomará una fotografía en el momento en que el paquete sea recibido, la cual servirá como garantía de que la entrega se realizó correctamente.</p>
+        <div class="lg:grid lg:grid-cols-2 lg:gap-10 max-w-4xl mx-auto lg:items-center">
+            <div class="mb-10">
+                <Picture src={ DNI } alt="Imagen de un Carnet de Identidad Cubano" class="w-80 mx-auto rounded-2xl border-4 -rotate-6 shadow shadow-gray-500"/>
+            </div>
+    
+            <div class="px-3 lg:row-start-1 lg:row-end-2">
+                <p class="first-letter:pl-3 pb-5">Una vez realizado el pago, el cliente deberá enviar los siguientes datos para proceder con el despacho del paquete:</p>
+                <ul class="mb-5 pl-5 list-disc">
+                    <li>Dirección completa de entrega.</li>
+                    <li>Fotografía de la identificación oficial de la persona que recibirá el paquete.</li>
+                </ul>
+                <p class="first-letter:pl-3 pb-5">Con esta información, el paquete podrá ser entregado el mismo día, siempre que las condiciones logísticas lo permitan. En cualquier caso, el plazo máximo de entrega es de 72 horas a partir de la confirmación de los datos mencionados. Como comprobante de entrega, se tomará una fotografía en el momento en que el paquete sea recibido, la cual servirá como garantía de que la entrega se realizó correctamente.</p>
+            </div>
         </div>
     </Section>
 </Layout>

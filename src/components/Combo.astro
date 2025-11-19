@@ -15,7 +15,7 @@ const { id, title, content, price } = Astro.props;
 
 <div class="relative w-80 pt-5 rounded-3xl shadow-md shadow-black/80 bg-black/50 p-2">
     <ComboPrice price={ price } server:defer>
-        <span slot="fallback" class="absolute right-0 top-0 rotate-12 text-3xl text-yellow-300">Cargando...</span>
+        <span slot="fallback" class="absolute right-0 top-0 rotate-12 text-3xl text-gray-800/50 animate-pulse">Cargando...</span>
     </ComboPrice>
 
     <h3 class="mb-5 font-[Barlow] text-2xl text-center">{ title }</h3>

@@ -12,17 +12,17 @@ const sections = [
 ---
 
 <header class="min-h-screen flex flex-col justify-center items-center gap-10 relative">
-    <div class="relative size-80 flex items-center justify-center bg-radial to-black to-90% from-red-900">
+    <div class="relative size-80 lg:size-96 flex items-center justify-center bg-radial to-black to-90% from-red-900">
         <Picture src={ HeaderPicture } formats={[ "avif", "webp" ]} alt="Logotipo del sitio."  class="absolute w-80 z-10 top-7 left-1/2 -translate-x-1/2 fade-in"/>
 
-        <h1 class="font-[Barlow] text-6xl z-20 fade-in-delay">
+        <h1 class="font-[Barlow] text-6xl z-20 fade-in-delay ">
             <span class="block text-center">COMBOS</span>
             <span class="block text-center text-black/50 text-stroke">SANTIAGO</span>
         </h1>
     </div>
 
     <nav>
-        <ul class="flex flex-col items-center gap-5 text-xl font-bold fade-in-delay">
+        <ul class="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 text-xl font-bold fade-in-delay">
             {
                 sections.map(({ href, label })=> (
                     <li><a href={ href }>{ label }</a></li>
@@ -33,3 +33,4 @@ const sections = [
 
     <Down class="absolute bottom-24 animate-bounce text-white/30"/>
 </header>
+
